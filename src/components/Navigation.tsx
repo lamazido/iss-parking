@@ -25,8 +25,10 @@ const Navigation = () => {
     <>
       <nav
         ref={navRef}
-        className={`navbar ${scrollY >= 50 && " is-sticky"
-          } fixed top-0 start-0 end-0 z-999 transition-all duration-500 py-5 items-center shadow-md lg:shadow-none [&.is-sticky]:lg:bg-blue-900 group [&.is-sticky]:shadow-md bg-white lg:bg-blue-900`}
+        className={`navbar ${scrollY >= 50 ? "bg-blue-950/95 shadow-lg backdrop-blur-md" : "bg-blue-900"
+          } fixed top-0 start-0 end-0 z-999 transition-all duration-500 py-5 items-center`}
+        // className={`navbar ${scrollY >= 50 && " is-sticky"
+        //   } fixed top-0 start-0 end-0 z-999 transition-all duration-500 py-5 items-center shadow-md lg:shadow-none [&.is-sticky]:lg:bg-blue-900 group [&.is-sticky]:shadow-md bg-white lg:bg-blue-900`}
         id="navbar"
       >
         <div className="container">
@@ -96,35 +98,6 @@ const Navigation = () => {
                     Features
                   </a>
                 </li>
-
-
-
-                {/* <li className="nav-item mx-1.5 transition-all text-white duration-300 hover:text-orange-500 [&.active]:!text-orange-600">
-                  <a
-                    className="nav-link inline-flex items-center text-sm lg:text-base font-medium py-1 px-2 capitalize"
-                    href="#pricing"
-                  >
-                    Pricing
-                  </a>
-                </li> */}
-
-                {/* <li className="nav-item mx-1.5 transition-all text-white duration-300 hover:text-orange-500 [&.active]:!text-orange-600">
-                  <a
-                    className="nav-link inline-flex items-center text-sm lg:text-base font-medium py-1 px-2 capitalize"
-                    href="#testimonial"
-                  >
-                    Testimonials
-                  </a>
-                </li> */}
-
-                {/* <li className="nav-item mx-1.5 transition-all text-white duration-300 hover:text-orange-500 [&.active]:!text-orange-600">
-                  <a
-                    className="nav-link inline-flex items-center text-sm lg:text-base font-medium py-1 px-2 capitalize"
-                    href="#blog"
-                  >
-                    Blog
-                  </a>
-                </li> */}
 
                 <li className="nav-item mx-1.5 transition-all text-white duration-300 hover:text-orange-500 [&.active]:!text-orange-600">
                   <a
